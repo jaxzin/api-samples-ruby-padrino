@@ -18,7 +18,7 @@
                              'bootstrap-transition',
                              'bootstrap-typeahead'
     = yield_content :include
-  %body
+  %body{:onload=>'javascript:startCarousel();'}
     .navbar{:class=>'navbar-fixed-top'}
       .navbar-inner
         .container
