@@ -1,0 +1,174 @@
+/* Add additional stylesheets below
+-------------------------------------------------- */
+
+.projects h1 {
+    text-align: center;
+    font-weight: 300;
+    margin-top: 36px;
+    margin-bottom: 27px;
+}
+
+.hero-unit {
+    text-align: center;
+}
+
+.hero-unit .btn-large {
+    font-size: 18px;
+    font-weight: normal;
+    padding: 12px 20px;
+    margin-right: 10px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+/* Responsive Docs
+-------------------------------------------------- */
+@media (max-width: 480px) {
+
+  /* Reduce padding above jumbotron */
+  body {
+    padding-top: 70px;
+  }
+
+  /* Change up some type stuff */
+  h2 {
+    margin-top: 27px;
+  }
+  h2 small {
+    display: block;
+    line-height: 18px;
+  }
+  h3 {
+    margin-top: 18px;
+  }
+
+  /* Adjust the hero-unit */
+  .hero-unit h1,
+  .hero-unit p {
+    text-align: center;
+    margin-right: 0;
+  }
+  .hero-unit h1 {
+    font-size: 45px;
+    margin-right: 0;
+  }
+  .hero-unit p {
+    margin-right: 0;
+    margin-left: 0;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .hero-unit .btn {
+    display: block;
+    font-size: 18px;
+    padding: 10px 14px;
+    margin: 0 auto 10px;
+  }
+  /* Masthead (home page jumbotron) */
+  .masthead {
+    padding-top: 0;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0;
+  }
+
+    .hero-unit {
+        padding: 6px;
+    }
+
+  /* hero-unit buttons */
+  .hero-unit .btn {
+    margin-bottom: 10px;
+  }
+
+  /* Unfloat the back to top link in footer */
+  .footer .pull-right {
+    float: none;
+  }
+  .footer p {
+    margin-bottom: 9px;
+  }
+
+}
+
+
+@media (min-width: 480px) and (max-width: 768px) {
+
+  /* Scale down the hero-unit content */
+  .hero-unit h1 {
+    font-size: 54px;
+  }
+  .hero-unit p {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  .hero-unit {
+      padding: 6px;
+  }
+
+    .carousel {
+        width: 576px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 980px) {
+
+  /* Remove any padding from the body */
+  body {
+    padding-top: 0;
+  }
+
+  /* Scale down the hero-unit content */
+  .hero-unit h1 {
+    font-size: 72px;
+  }
+
+    .carousel {
+        width: 576px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+
+@media (max-width: 980px) {
+
+}
+
+
+/* LARGE DESKTOP SCREENS */
+@media (min-width: 1210px) {
+
+    .hero-unit h1 {
+        font-size: 81px;
+        text-align: center;
+    }
+
+  /* Update subnav container */
+  .subnav-fixed .nav {
+    width: 1168px; /* 2px less to account for left/right borders being removed when in fixed mode */
+  }
+
+  .carousel {
+      width: 900px;
+      margin-right: auto;
+      margin-left: auto;
+  }
+
+    .carousel-inner .item img {
+        width: 900px;
+    }
+
+}

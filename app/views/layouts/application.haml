@@ -2,8 +2,21 @@
 %html
   %head
     %title= [@title, "ESPN API Samples"].compact.join(" | ")
-    = stylesheet_link_tag 'reset', 'application'
-    = javascript_include_tag 'jquery', 'application'
+    = stylesheet_link_tag 'reset', 'bootstrap', 'application'
+    = javascript_include_tag 'jquery',
+                             'application',
+                             'bootstrap-alert',
+                             'bootstrap-button',
+                             'bootstrap-carousel',
+                             'bootstrap-collapse',
+                             'bootstrap-dropdown',
+                             'bootstrap-modal',
+                             'bootstrap-popover',
+                             'bootstrap-scrollspy',
+                             'bootstrap-tab',
+                             'bootstrap-tooltip',
+                             'bootstrap-transition',
+                             'bootstrap-typeahead'
     = yield_content :include
   %body
     #header
