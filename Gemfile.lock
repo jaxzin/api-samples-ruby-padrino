@@ -13,6 +13,7 @@ GEM
     activesupport (3.1.4)
       multi_json (~> 1.0)
     arel (2.2.3)
+    bcrypt-ruby (3.0.1)
     builder (3.0.0)
     commonjs (0.2.0)
       therubyracer (~> 0.9.9)
@@ -101,6 +102,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+  bcrypt-ruby
   haml
   padrino (= 0.10.5)
   rack-less
