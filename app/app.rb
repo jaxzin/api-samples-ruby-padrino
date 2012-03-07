@@ -57,4 +57,8 @@ class ApiSamplesRubyPadrino < Padrino::Application
   #     render 'errors/505'
   #   end
   #
+
+  get "/" do
+    "Hello, World!"
+  end
 end

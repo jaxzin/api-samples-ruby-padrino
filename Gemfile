@@ -29,3 +29,7 @@ gem 'padrino', '0.10.5'
 # %w(core gen helpers cache mailer admin).each do |g|
 #   gem 'padrino-' + g, '0.10.5'
 # end
+
+# Rest Client
+gem 'rest-client'
+gem 'activesupport'

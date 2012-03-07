@@ -1,0 +1,3 @@
+- @title = "Welcome"
+
+.carousel-inner= partial 'top_headlines/headline', :collection => @headlines.select {|headline| headline['images'].length > 0 }
