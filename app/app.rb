@@ -59,7 +59,7 @@ class ApiSamplesRubyPadrino < Padrino::Application
   #
 
   get "/" do
-    render :haml, "%p This is a set of sample usages of the ESPN API."
+    render 'index'
   end
 
   get :about, :map => '/about' do
