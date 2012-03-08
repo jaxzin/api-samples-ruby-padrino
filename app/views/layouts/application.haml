@@ -33,6 +33,7 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
+          %a.brand{:href=>'#'} ESPN API Samples
           .nav-collapse
             %ul.nav
               %li= link_to 'Welcome', url_for(:welcome)
@@ -44,6 +45,5 @@
                 %a{:href=>"http://espn.github.com"}= 'ESPN on GitHub'
 
     #header
-      %h1 ESPN API Samples
-      %h2= @title
+      %h1= @title
     .container= yield
