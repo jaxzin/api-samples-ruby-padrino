@@ -33,11 +33,12 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand{:href=>'#'} ESPN API Samples
+          %a.brand{:href=> url_for(:welcome) } ESPN API Samples
           .nav-collapse
             %ul.nav
               %li= link_to 'Welcome', url_for(:welcome)
               %li= link_to 'Headlines', url_for(:top_headlines, :index)
+            %ul.nav{:class => 'pull-right'}
               %li
                 %a{:href=>"http://developer.espn.com"}= 'Dev Center'
               %li
