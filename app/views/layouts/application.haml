@@ -44,6 +44,8 @@
               %li
                 %a{:href=>"http://espn.github.com"}= 'ESPN on GitHub'
 
-    #header
-      %h1= @title
-    .container= yield
+    .container
+      %header.jumbotron{:class=>:subhead,:id=>:overview}
+        %h1= @title
+        %p.lead= @lead
+      = yield
