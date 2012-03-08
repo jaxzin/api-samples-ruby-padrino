@@ -58,7 +58,7 @@ class ApiSamplesRubyPadrino < Padrino::Application
   #   end
   #
 
-  get "/" do
+  get :welcome, :map => '/' do
     render 'index'
   end
 
