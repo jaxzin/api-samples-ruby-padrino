@@ -143,8 +143,17 @@
 }
 
 
-@media (max-width: 980px) {
+@media (min-width: 980px) {
 
+    .carousel {
+        width: 750px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .carousel-inner .item img {
+        width: 750px;
+    }
 }
 
 
