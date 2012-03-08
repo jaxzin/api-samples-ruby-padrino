@@ -62,4 +62,12 @@ class ApiSamplesRubyPadrino < Padrino::Application
     render 'index'
   end
 
+
+  def active_style page
+    if page == request.path
+      :active
+    else
+      nil
+    end
+  end
 end
