@@ -30,6 +30,5 @@ gem 'padrino', '0.10.5'
 #   gem 'padrino-' + g, '0.10.5'
 # end
 
-# Rest Client
-gem 'rest-client'
-gem 'activesupport'
+# ESPN API
+gem 'espn_rb'

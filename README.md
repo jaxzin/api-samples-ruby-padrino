@@ -9,7 +9,7 @@ Assumes your local environment is already [setup to deploy to Heroku](http://dev
     $ heroku create --stack bamboo-ree-1.8.7
     $ git push heroku master
     ... wait for it to push and launch ...
-    $ heroku config:add ESPN_APIKEY=[your apikey from http://developer.espn.com]
+    $ heroku config:add espn_api_key=[your apikey from http://developer.espn.com]
     ... wait for it to add the config vars and restart ...
     $ heroku open
 
