@@ -1,0 +1,13 @@
+- @title = "Headlines"
+
+- content_for :header do
+  %p.lead Samples of how you could use the Headlines API for various components.
+  .subnav
+    %ul.nav.nav-pills
+      %li.active
+        %a{:href=>'#carousel'} Carousel
+      %li
+        %a{:href=>'#accordion'} Accordion
+
+= partial 'headlines/carousel'
+= partial 'headlines/accordion'

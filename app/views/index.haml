@@ -1,2 +1,13 @@
 - @title = "Welcome"
-- @lead = "This site contains a set of sample usages of the ESPN API."
+
+- content_for :header do
+  %p.lead This site contains a set of sample usages of the ESPN API.
+
+%hr.soften
+
+%section.marketing#samples
+  .row
+    .span4
+      %h2 Headlines API
+      %p See some example ways that you might use the ESPN Headlines API in your application.
+      = link_to 'See sample &raquo;', url_for(:headlines, :index), :class =>'btn btn-primary'

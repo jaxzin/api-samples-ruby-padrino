@@ -1,0 +1,16 @@
+%section#accordion
+  .page-header
+    %h1 Top Headlines Accordion
+  .row
+    .span4
+      .accordion.well.espn-accordion#espn-accordion-nba
+        %h3 NBA Top Stories
+        = partial 'headlines/accordion_group', :collection => @accordion_headlines_nba, :locals => {:proleague => :nba}
+    .span4
+      .accordion.well.espn-accordion#espn-accordion-mlb
+        %h3 MLB Top Stories
+        = partial 'headlines/accordion_group', :collection => @accordion_headlines_mlb, :locals => {:proleague => :mlb}
+    .span4
+      .accordion.well.espn-accordion#espn-accordion-nfl
+        %h3 NFL Top Stories
+        = partial 'headlines/accordion_group', :collection => @accordion_headlines_nfl, :locals => {:proleague => :nfl}

@@ -1,0 +1,10 @@
+.accordion-group
+  .accordion-heading
+    %a.accordion-toggle{'data-toggle'=>'collapse','data-parent'=>".espn-accordion", :href=>"#collapse_#{proleague}_#{accordion_group_counter}", :muse_scanned=>'true'}= accordion_group['headline']
+  .accordion-body.collapse{:id=>"collapse_#{proleague}_#{accordion_group_counter}"  }
+    .accordion-inner
+      %div
+        = accordion_group['description']
+        %a.btn{:href => accordion_group['links']['web']['href']} Read more &raquo;
+      %span.label.label-info= accordion_group['source']
+      %span.age= time_ago_in_words(accordion_group['lastModified']) + ' ago'

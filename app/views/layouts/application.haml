@@ -9,23 +9,9 @@
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
     <![endif]-->
-    = stylesheet_link_tag 'reset', 'bootstrap', 'wedge', 'bootstrap-responsive', 'application'
-    = javascript_include_tag 'jquery',
-                             'application',
-                             'bootstrap-alert',
-                             'bootstrap-button',
-                             'bootstrap-carousel',
-                             'bootstrap-collapse',
-                             'bootstrap-dropdown',
-                             'bootstrap-modal',
-                             'bootstrap-popover',
-                             'bootstrap-scrollspy',
-                             'bootstrap-tab',
-                             'bootstrap-tooltip',
-                             'bootstrap-transition',
-                             'bootstrap-typeahead'
+    = stylesheet_link_tag 'bootstrap', 'wedge', 'bootstrap-responsive', 'application'
     = yield_content :include
-  %body{:onload=>'javascript:startCarousel();'}
+  %body{:onload=>'javascript:startCarousel();', 'data-spy'=>'scroll', 'data-target'=>'.subnav', 'data-offset'=>'50'}
     .navbar{:class=>'navbar-fixed-top'}
       .navbar-inner
         .container
@@ -37,7 +23,7 @@
           .nav-collapse
             %ul.nav
               %li{:class=>active_style(url_for(:welcome))}= link_to 'Welcome', url_for(:welcome)
-              %li{:class=>active_style(url_for(:top_headlines, :index))}= link_to 'Headlines', url_for(:top_headlines, :index)
+              %li{:class=>active_style(url_for(:headlines, :index))}= link_to 'Headlines', url_for(:headlines, :index)
             %ul.nav{:class => 'pull-right'}
               %li
                 %a{:href=>"http://developer.espn.com"}= 'Dev Center'
@@ -47,8 +33,24 @@
     .container
       %header.jumbotron{:class=>:subhead,:id=>:overview}
         %h1= @title
-        %p.lead= @lead
+        = yield_content :header
       = yield
 
+      %hr.soften
       #footer
         <img alt="150px wide black short" src="http://a.espncdn.com/i/apis/attribution/espn-api-black_150.png">
+
+    =  javascript_include_tag 'jquery',
+                               'bootstrap-alert',
+                               'bootstrap-button',
+                               'bootstrap-carousel',
+                               'bootstrap-collapse',
+                               'bootstrap-dropdown',
+                               'bootstrap-modal',
+                               'bootstrap-scrollspy',
+                               'bootstrap-tab',
+                               'bootstrap-tooltip',
+                               'bootstrap-popover',
+                               'bootstrap-transition',
+                               'bootstrap-typeahead',
+                               'application'

@@ -22,6 +22,77 @@
     border-radius: 6px;
 }
 
+.accordion h3 {
+    text-align: center;
+}
+
+.age {
+    font-style: italic;
+    font-size: 80%;
+    opacity: 0.6;
+    text-align: right;
+}
+
+#espn-accordion-nba {
+    background-color: #fbeed5;
+}
+
+#espn-accordion-mlb {
+    background-color: rgba(225, 227, 242, 0.73);
+}
+
+#espn-accordion-nfl {
+    background-color: #eaf7ec;
+}
+
+/* Marketing section of Overview
+-------------------------------------------------- */
+.marketing .row {
+    margin-bottom: 9px;
+}
+.marketing h1 {
+    margin: 36px 0 27px;
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+}
+.marketing h2,
+.marketing h3 {
+    font-weight: 300;
+}
+.marketing h2 {
+    font-size: 22px;
+}
+.marketing p {
+    margin-right: 10px;
+}
+.marketing .bs-icon {
+    float: left;
+    margin: 7px 10px 0 0;
+    opacity: .8;
+}
+.marketing .small-bs-icon {
+    float: left;
+    margin: 4px 5px 0 0;
+}
+
+/* Space out sub-sections more
+-------------------------------------------------- */
+section {
+    padding-top: 60px;
+}
+
+/* Faded out hr */
+hr.soften {
+    height: 1px;
+    margin: 54px 0;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+    border: 0;
+}
+
 /* Jumbotrons
 -------------------------------------------------- */
 .jumbotron {
@@ -141,6 +212,36 @@
     border-radius: 0 0 4px 4px;
 }
 
+/* Fixed subnav on scroll, but only for 980px and up (sorry IE!) */
+@media (min-width: 980px) {
+    .subnav-fixed {
+        position: fixed;
+        top: 40px;
+        left: 0;
+        right: 0;
+        z-index: 1020; /* 10 less than .navbar-fixed to prevent any overlap */
+        border-color: #d5d5d5;
+        border-width: 0 0 1px; /* drop the border on the fixed edges */
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        -webkit-box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+        -moz-box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+        box-shadow: inset 0 1px 0 #fff, 0 1px 5px rgba(0,0,0,.1);
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled=false); /* IE6-9 */
+    }
+    .subnav-fixed .nav {
+        width: 938px;
+        margin: 0 auto;
+        padding: 0 1px;
+    }
+    .subnav .nav > li:first-child > a,
+    .subnav .nav > li:first-child > a:hover {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+    }
+}
 
 /* Responsive Docs
 -------------------------------------------------- */
@@ -217,6 +318,33 @@
     margin-bottom: 9px;
   }
 
+    /* Subnav */
+    .subnav {
+        position: static;
+        top: auto;
+        z-index: auto;
+        width: auto;
+        height: auto;
+        background: #fff; /* whole background property since we use a background-image for gradient */
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    .subnav .nav > li {
+        float: none;
+    }
+    .subnav .nav > li > a {
+        border: 0;
+    }
+    .subnav .nav > li + li > a {
+        border-top: 1px solid #e5e5e5;
+    }
+    .subnav .nav > li:first-child > a,
+    .subnav .nav > li:first-child > a:hover {
+        -webkit-border-radius: 4px 4px 0 0;
+        -moz-border-radius: 4px 4px 0 0;
+        border-radius: 4px 4px 0 0;
+    }
 }
 
 
