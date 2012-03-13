@@ -5,6 +5,8 @@ function startCarousel() {
     carouselInner.children(':first').addClass('active');
 
     $('.carousel').carousel({interval:7000});
+
+    $('#espn-marquee').webTicker();
 }
 
 

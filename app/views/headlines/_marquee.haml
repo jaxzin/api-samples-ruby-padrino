@@ -1,0 +1,12 @@
+%section#marquee
+  .page-header
+    %h1 Top Headlines Marquee
+  .row
+    .span12
+      %ul.marquee#espn-marquee
+        %li.marquee-section NBA
+        = partial 'headlines/marquee_item', :collection => @accordion_headlines_nba
+        %li.marquee-section MLB
+        = partial 'headlines/marquee_item', :collection => @accordion_headlines_mlb
+        %li.marquee-section NFL
+        = partial 'headlines/marquee_item', :collection => @accordion_headlines_nfl

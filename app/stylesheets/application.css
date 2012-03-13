@@ -243,6 +243,70 @@ hr.soften {
     }
 }
 
+/* Marquee */
+.tickercontainer { /* the outer div */
+    background: black;
+    color: #d3d3d3;
+    background-image: -moz-linear-gradient(top, #808080 0%, black 100%); /* FF3.6+ */
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#808080), color-stop(100%,black)); /* Chrome,Safari4+ */
+    background-image: -webkit-linear-gradient(top, #808080 0%,black 100%); /* Chrome 10+,Safari 5.1+ */
+    background-image: -ms-linear-gradient(top, #808080 0%,black 100%); /* IE10+ */
+    background-image: -o-linear-gradient(top, #808080 0%,blakc 100%); /* Opera 11.10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#808080', endColorstr='black',GradientType=0 ); /* IE6-9 */
+    background-image: linear-gradient(top, #808080 0%,black 100%); /* W3C */
+
+    width: 100%;
+    margin: 0;
+    padding: 5px 0;
+    overflow: hidden;
+}
+.tickercontainer .mask { /* that serves as a mask. so you get a sort of padding both left and right */
+    position: relative;
+    height: 18px;
+    overflow: hidden;
+}
+ul.newsticker { /* that's your list */
+    position: relative;
+    font-weight: bold;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+ul.marquee li {
+    float: left; /* important: display inline gives incorrect results when you check for elem's width */
+    margin: 0;
+}
+
+ul.marquee a {
+    white-space: nowrap;
+    padding: 0;
+    color: #d3d3d3;
+    margin: 0 10px 0 0;
+}
+
+ul.marquee span {
+    margin: 0 10px 0 0;
+}
+
+li.marquee-section {
+    text-align: center;
+    padding-right: 10px;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+}
+
+#espn-marquee{
+    float:left;
+}
+
+#espn-marquee li {
+    float: left; /* important: display inline gives incorrect results when you check for elem's width */
+    margin: 0;
+    padding-left: 15px;
+    /*background: #fff;*/
+}
+
 /* Responsive Docs
 -------------------------------------------------- */
 @media (max-width: 480px) {
