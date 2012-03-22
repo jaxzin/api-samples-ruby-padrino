@@ -6,13 +6,17 @@ module LessInitializer
 require 'rack/less'
 # optional - use as necessary
 Rack::Less.configure do |config|
-  config.compress = true
+  #config.compress = :yui
   # other configs ...
+  config.combinations = {
+          "api_samples" => ['bootstrap/bootstrap', 'wedge', 'bootstrap/responsive', 'application']
+  }
+  config.cache = true
 end
 app.use Rack::Less,
 :root      => app.root,
 :source    => 'stylesheets/',
-:public    => 'public/',
+:public    => '../tmp/public/',
 :hosted_at => '/stylesheets'
 
   end

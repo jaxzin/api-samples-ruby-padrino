@@ -9,9 +9,17 @@
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
     <![endif]-->
-    = stylesheet_link_tag 'bootstrap', 'wedge', 'bootstrap-responsive', 'application'
+    - logger.debug("before stylesheets")
+    -#=stylesheet_link_tag 'bootstrap/bootstrap'
+    -#=stylesheet_link_tag 'wedge'
+    -#=stylesheet_link_tag 'bootstrap/responsive'
+    -#=stylesheet_link_tag 'application'
+    -#= stylesheet_link_tag 'bootstrap/bootstrap', 'wedge', 'bootstrap/responsive', 'application', :cache => 'api_samples'
+    =stylesheet_link_tag Rack::Less.stylesheet('api_samples')
+    - logger.debug("passed stylesheets")
     = yield_content :include
   %body{:onload=>'javascript:startCarousel();', 'data-spy'=>'scroll', 'data-target'=>'.subnav', 'data-offset'=>'50'}
+    - logger.debug("passed body")
     .navbar{:class=>'navbar-fixed-top'}
       .navbar-inner
         .container
@@ -36,22 +44,23 @@
         = yield_content :header
       = yield
 
+      - logger.debug("passed yield")
       %hr.soften
       #footer
         <img alt="150px wide black short" src="http://a.espncdn.com/i/apis/attribution/espn-api-black_150.png">
 
     =  javascript_include_tag 'jquery',
                               'jquery.webticker',
-                               'bootstrap-alert',
-                               'bootstrap-button',
-                               'bootstrap-carousel',
-                               'bootstrap-collapse',
-                               'bootstrap-dropdown',
-                               'bootstrap-modal',
-                               'bootstrap-scrollspy',
-                               'bootstrap-tab',
-                               'bootstrap-tooltip',
-                               'bootstrap-popover',
-                               'bootstrap-transition',
-                               'bootstrap-typeahead',
+                               'bootstrap/bootstrap-alert',
+                               'bootstrap/bootstrap-button',
+                               'bootstrap/bootstrap-carousel',
+                               'bootstrap/bootstrap-collapse',
+                               'bootstrap/bootstrap-dropdown',
+                               'bootstrap/bootstrap-modal',
+                               'bootstrap/bootstrap-scrollspy',
+                               'bootstrap/bootstrap-tab',
+                               'bootstrap/bootstrap-tooltip',
+                               'bootstrap/bootstrap-popover',
+                               'bootstrap/bootstrap-transition',
+                               'bootstrap/bootstrap-typeahead',
                                'application'

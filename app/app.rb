@@ -1,4 +1,5 @@
 class ApiSamplesRubyPadrino < Padrino::Application
+  # TODO find out why less compiler is hanging
   register LessInitializer
   register Padrino::Rendering
   register Padrino::Mailer
