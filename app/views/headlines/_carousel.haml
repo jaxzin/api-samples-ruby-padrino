@@ -4,6 +4,6 @@
     %h1 Top Headlines Carousel
   .row
     #myCarousel{ :class => 'carousel' }
-      .carousel-inner= partial 'headlines/headline', :collection => @headlines.select {|headline|  headline['images'].length > 0 and headline['images'][0]['width'] > headline['images'][0]['height'] }
+      .carousel-inner= partial 'headlines/headline', :collection => @headlines.select {|headline|  headline.images.any? and headline.images.first.landscape? }
       %a{ :class => ['carousel-control', 'left'],  :href => '#myCarousel', 'data-slide' => 'prev' }= '&lsaquo;'
       %a{ :class => ['carousel-control', 'right'], :href => '#myCarousel', 'data-slide' => 'next' }= '&rsaquo;'

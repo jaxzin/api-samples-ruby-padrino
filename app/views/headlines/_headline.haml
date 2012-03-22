@@ -1,5 +1,5 @@
 .item
-  %a{:href => headline['links']['web']['href']}
-    %img{:src => headline['images'][0]['url'], :alt => headline['images'][0]['caption']}
+  %a{:href => headline.web_url}
+    %img{:src => headline.images.first.url, :alt => headline.images.first.caption}
   .carousel-caption
-    %h4= headline['title']
+    %h4= headline.headline['title']
