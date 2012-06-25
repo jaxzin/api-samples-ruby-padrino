@@ -1,7 +1,7 @@
 PADRINO_ENV = 'test' unless defined?(PADRINO_ENV)
 require File.expand_path(File.dirname(__FILE__) + "/../config/boot")
 
-require 'shoulda/active_record'
+#require 'shoulda/active_record'
 
 class Test::Unit::TestCase
   include Rack::Test::Methods

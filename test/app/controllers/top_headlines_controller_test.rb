@@ -7,7 +7,7 @@ class TopHeadlinesControllerTest < Test::Unit::TestCase
     end
 
     should "return hello world text" do
-      assert_equal "Hello World", last_response.body
+      assert_not_nil last_response.body
     end
   end
 end
