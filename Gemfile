@@ -1,4 +1,5 @@
-source :rubygems
+source "https://rubygems.org"
+ruby "1.9.2"
 
 # Server requirements (defaults to WEBrick)
 # gem 'thin'
